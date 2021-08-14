@@ -1,0 +1,16 @@
+<site-section class="Portfolio" id="portfolio">
+  <div class="Portfolio-background"></div>
+  <h1 class="Portfolio-title SectionTitle">{{ $t('portfolio.title') }}</h1>
+  <ul class="Portfolio-itemList">
+    <li
+      v-for="item, i in items"
+      :key="i"
+      class="Portfolio-item">
+      <button class="Portfolio-itemAction" href="#">
+        <img class="Portfolio-itemImg" :src="item.img" />
+        <h2 class="Portfolio-itemTitle">{{ $t(item.title) }}</h2>
+      </button>
+    </li>
+  </ul>
+</site-section>
+

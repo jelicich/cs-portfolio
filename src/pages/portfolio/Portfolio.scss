@@ -1,0 +1,93 @@
+@import '@/styles/variables';
+@import '@/styles/breakpoints';
+
+.Portfolio {
+  position: relative;
+
+  @include xs {
+    .SiteSection-innerContainer {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+  }
+
+  &-background {
+    height: 30vh;
+    width: 100%;
+    margin-left: -$side-spacing;
+    background: $primary;
+    position: absolute;
+    top: calc(50vh + #{$header-height} - #{$header-height / 2});
+    z-index: -1;
+    margin-top: -15vh;
+
+    @include sm-down {
+      height: 20vh;
+      margin-left: -$side-spacing-mobile;
+    }
+
+    @include xs {
+      width: 30vw;
+      height: 100vh;
+      top: 0;
+      right: 10vw;
+      margin-top: 0;
+    }
+  }
+
+  &-itemList {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+
+    @include xs {
+      flex-direction: column;
+      align-self: flex-end;
+    }
+  }
+
+  &-item {
+    margin-right: 30px;
+    
+    @include xs {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  &-itemAction {
+    border: $border;
+    padding: 40px 15px 15px 40px;
+    text-align: right;
+    background: none;
+    cursor: pointer;
+    color: $font-color;
+    height: 100%;
+
+    @include xs {
+      padding: 20px 5px 5px 20px;
+      width: 200px;
+    }
+  }
+
+  &-itemTitle {
+    font-weight: $semi-bold;
+    font-size: 20px;
+    text-transform: none;
+
+    @include xs {
+      font-size: 15px;
+    }
+  }
+
+  &-itemImg {
+    width: 100%;
+    object-fit: contain;
+
+    @include xs {
+      max-width: 75px;
+    }
+  }
+}

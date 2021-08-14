@@ -10,7 +10,8 @@ $bold: 600;
 $extra-bold: 800;
 
 $side-spacing: 10vw;
+$side-spacing-mobile: $side-spacing / 2;
 $padding-container: 0 $side-spacing;
-$padding-container-mobile: 0 $side-spacing / 2;
+$padding-container-mobile: 0 $side-spacing-mobile;
 
 $header-height: 50px;
