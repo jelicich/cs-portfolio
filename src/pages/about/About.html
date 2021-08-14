@@ -1,4 +1,12 @@
-<site-section class="Section" id="about">
-  <h1>About</h1>
+<site-section class="About" id="about">
+  <div class="About-background"></div>
+  <h1 class="About-title SectionTitle">{{ $t('about.title') }}</h1>
+  <div class="About-contentActionWrapper">
+    <img class="About-portrait" src="@/assets/about-pic.jpg" />
+    <div class="About-contentContainer">
+      <p class="About-content" v-html="$t('about.content')"></p>
+    </div>
+    <a class="About-action Button" href="#">{{ $t('about.action') }}</a>
+  </div>
 </site-section>
 

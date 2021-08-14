@@ -1,4 +1,5 @@
 @import '@/styles/variables';
+@import '@/styles/breakpoints';
 
 .SiteSection {
   padding: $padding-container;
@@ -7,4 +8,9 @@
   box-sizing: border-box;
   display: flex;
   align-items: center;
+
+  @include sm-down {
+    padding: $padding-container-mobile;
+    padding-top: $header-height + $header-height / 2;
+  }
 }

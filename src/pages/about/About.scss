@@ -1,17 +1,95 @@
-h3 {
-  margin: 40px 0 0;
-}
+@import '@/styles/variables';
+@import '@/styles/breakpoints';
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+.About {
+  position: relative;
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+  &-background {
+    width: $side-spacing * 1.5;
+    height: 100vh;
+    background: $primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
 
-a {
-  color: #42b983;
+    @include sm-down {
+      height: 30vh;
+      width: 100vw;
+    }
+  }
+
+  &-contentActionWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+    position: relative;
+
+    @include xl {
+      width: 40vw;
+    }
+  
+    @include sm-down {
+      width: 100%;
+    }
+  }
+
+  &-portrait {
+    position: absolute;
+    width: 200px;
+    z-index: 0;
+    left: $side-spacing * 0.5 / 2;
+    bottom: -50px;
+    border: $border;
+    border-color: $white;
+
+    @include xl {
+      bottom: -70px;
+    }
+
+    @include sm-down {
+      width: 25vw;
+      top: calc(-25vw - 20px);
+      right: 0;
+      bottom: auto;
+      left: auto;
+
+      @include landscape {
+        display: none;
+      }
+    }
+  }
+  
+  &-contentContainer {
+    border: $border;
+    padding: 20px;
+    padding-bottom: 100px;
+    padding-left: calc( #{$side-spacing} * 0.5 + 20px);
+    margin-bottom: 20px;
+
+    @include xl {
+      padding-bottom: 90px;
+    }
+
+    @include sm-down {
+      padding: 5vw;
+
+      @include landscape {
+        padding: 10px;
+      }
+    }
+  }
+
+  &-content {
+    line-height: 2;
+
+    @include sm-down {
+      line-height: normal;
+      font-size: 15px;
+    }
+  }
+
+  &-action {
+    align-self: flex-end;
+  }
 }
