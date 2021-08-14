@@ -24,5 +24,25 @@ export const es = {
   },
   portfolio: {
     title: "Portfolio",
+    items: {
+      item1: {
+        title: "Lorem ipsum dolor",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      },
+      item2: {
+        title: "Consectetur adipiscing",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      },
+      item3: {
+        title: "Sed do eiusmod",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+      },
+    },
+    modal: {
+      close: "Cerrar",
+    },
   },
 };

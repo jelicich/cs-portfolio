@@ -12,5 +12,11 @@
       </button>
     </li>
   </ul>
+  <section class="Portfolio-modal" v-if="isModalVisible">
+    <div class="Portfolio-modalHeader">
+      <h1></h1>
+      <button>{{ $t('portfolio.modal.close') }}</button>
+    </div>
+  </section>
 </site-section>
 
