@@ -12,4 +12,8 @@ export const ca = {
       en: "eng",
     },
   },
+  home: {
+    title: "Clara Serna",
+    subtitle: "Dissenyadora d’interiors",
+  },
 };

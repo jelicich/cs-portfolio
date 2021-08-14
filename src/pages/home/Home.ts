@@ -1,14 +1,10 @@
 import { Options, Vue } from "vue-class-component";
 
 @Options({
-  props: {
-    msg: String,
-  },
+  components: {},
 })
 export default class Home extends Vue {
-  msg!: string;
-
   mounted(): void {
-    console.log("mounted sarasasd");
+    console.log("mounted Home");
   }
 }

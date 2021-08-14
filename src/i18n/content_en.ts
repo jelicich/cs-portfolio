@@ -12,4 +12,8 @@ export const en = {
       en: "eng",
     },
   },
+  home: {
+    title: "Clara Serna",
+    subtitle: "Inerior designer",
+  },
 };

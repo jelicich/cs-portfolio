@@ -1,7 +1,7 @@
 <template>
   <site-header current-section="home"></site-header>
-  <home msg="Home" />
-  <about msg="About" />
+  <home />
+  <about />
 </template>
 
 <script lang="ts">

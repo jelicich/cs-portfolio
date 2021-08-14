@@ -9,6 +9,7 @@ $semi-bold: 500;
 $bold: 600;
 $extra-bold: 800;
 
-$padding-container: 0 10vw;
+$side-spacing: 10vw;
+$padding-container: 0 $side-spacing;
 
 $header-height: 50px;

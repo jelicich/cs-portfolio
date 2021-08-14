@@ -1,3 +1,73 @@
+@import '@/styles/variables';
+@import '@/styles/breakpoints';
+
+$frame-height: 70vh;
+$frame-height-portrait: 80vw;
+$frame-height-landscape-devices: 80vh;
+$padding-text: 20px;
+
 .Home {
-  
+  &.SiteSection {
+    padding-top: 0; //override default
+  }
+
+  &-frame {
+    width: $frame-height;
+    height: $frame-height;
+    position: absolute;
+    border: $border;
+    top: 50vh;
+    margin-top: -$frame-height / 2;
+
+    @include portrait {
+      width: $frame-height-portrait;
+      height: $frame-height-portrait;
+      margin-top: -$frame-height-portrait / 2;
+    }
+    
+    @include landscape {
+      @include md-down {
+        width: $frame-height-landscape-devices;
+        height: $frame-height-landscape-devices;
+        margin-top: -$frame-height-landscape-devices / 2;
+      }
+    }
+  }
+
+  &-title {
+    font-size: 60px;
+    font-weight: $bold;
+    padding-left: $padding-text;
+    
+    @include xs {
+      font-size: 30px;  
+    }
+    
+    @include landscape {
+      @include sm-down {
+        font-size: 30px;
+      }
+    }
+  }
+
+  &-subtitle {
+    font-size: 40px;
+    font-weight: $regular;
+    background: $primary;
+    color: $white;
+    margin-left: -$side-spacing;
+    padding: 10px;
+    padding-left: calc(#{$side-spacing} + #{$padding-text});
+    padding-right: $padding-text;
+
+    @include xs {
+      font-size: 18px;
+    }
+    
+    @include landscape {
+      @include sm-down {
+        font-size: 18px;
+      }
+    }
+  }
 }
