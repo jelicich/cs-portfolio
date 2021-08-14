@@ -1,0 +1,15 @@
+<header class="SiteHeader">
+  <h1 class="SiteHeader-title">Clara<span>Serna</span></h1>
+  <div class="SiteHeader-navContainer">
+    <nav class="SiteHeader-nav">
+      <a :class="{'is-active': currentSection === 'home'}" href="#home">{{ $t("header.menu.home") }}</a>
+      <a :class="{'is-active': currentSection === 'about'}" href="#about">{{ $t("header.menu.about") }}</a>
+      <a :class="{'is-active': currentSection === 'portfolio'}" href="#portfolio">{{ $t("header.menu.portfolio") }}</a>
+      <a :class="{'is-active': currentSection === 'contact'}" href="#contact">{{ $t("header.menu.contact") }}</a>
+    </nav>
+    <select class="SiteHeader-langSelector" v-model="$i18n.locale" @change="updateLocale($event)">
+      <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ $t(`header.lang.${locale}`) }}</option>
+    </select>
+  </div>
+</header>
+

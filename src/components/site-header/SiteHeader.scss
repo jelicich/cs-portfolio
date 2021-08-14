@@ -1,0 +1,63 @@
+@import '@/styles/variables';
+
+.SiteHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: $padding-container;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  box-sizing: border-box;
+  height: $header-height;
+
+  &-title {
+    margin:0;
+    text-transform: uppercase;
+    background: $primary;
+    color: $white;
+    padding: 3px 40px 3px 7px;
+    font-size: 22px;
+
+    span {
+      font-weight: $regular;
+    }
+  }
+
+  &-navContainer {
+    display: flex;
+    align-items: self-end;
+  }
+
+  &-nav {
+    text-transform: uppercase;
+
+    a {
+      display: inline-block;
+      margin-right: 10px;
+      font-weight: $semi-bold;
+
+      &.is-active {
+        color: $primary;
+
+        &::after {
+          background-color: $primary
+        }
+      }
+    }
+  }
+
+  &-langSelector {
+    border: none;
+    color: $primary;
+    background: none;
+    cursor: pointer;
+    padding: 2px 1px 1px 5px;
+    border-left: $border;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
