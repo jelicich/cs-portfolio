@@ -1,0 +1,44 @@
+@import '@/styles/variables';
+@import '@/styles/breakpoints';
+
+.Contact {
+  &.SiteSection {
+    justify-content: flex-end;
+  }
+
+  &-contentWrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-title {
+    text-align: right;
+  }
+
+  &-frame {
+    // TODO: temp
+    padding: 40px;
+    border: $border;
+  }
+
+  &-content {
+    margin-bottom: 20px;
+  }
+
+  &-action {
+    display: block;
+    width: calc(100% + 42px + #{$side-spacing});
+
+    @include sm-down {
+      width: calc(100% + 42px + #{$side-spacing-mobile});
+    }
+    
+    &.Button {
+      background-color: $primary;
+
+      &:hover {
+        background-color: #df990ad1;
+      }
+    }
+  }
+}

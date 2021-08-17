@@ -36,12 +36,6 @@
     }
   }
 
-  &-title {
-    @include sm-down {
-      font-size: 18px;
-    }
-  }
-
   &-description {
     margin-bottom: 20px;
   }

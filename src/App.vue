@@ -3,6 +3,7 @@
   <home />
   <about />
   <portfolio />
+  <contact />
 </template>
 
 <script lang="ts">
@@ -10,6 +11,7 @@ import { Options, Vue } from "vue-class-component";
 import SiteHeader from "@/components/site-header/index.vue";
 import Home from "@/pages/home/index.vue";
 import About from "@/pages/about/index.vue";
+import Contact from "@/pages/contact/index.vue";
 import Portfolio from "@/pages/portfolio/index.vue";
 
 @Options({
@@ -18,6 +20,7 @@ import Portfolio from "@/pages/portfolio/index.vue";
     Home,
     About,
     Portfolio,
+    Contact,
   },
 })
 export default class App extends Vue {}

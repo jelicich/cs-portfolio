@@ -45,4 +45,9 @@ export const es = {
   modal: {
     close: "Cerrar",
   },
+  contact: {
+    title: "Contacto",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+  },
 };

@@ -45,4 +45,9 @@ export const ca = {
   modal: {
     close: "Tanca",
   },
+  contact: {
+    title: "Contacte",
+    content:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+  },
 };
