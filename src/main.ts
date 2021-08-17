@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import { createI18n } from "vue-i18n";
+import DeviceHelper from "@/plugins/device-helper";
 import { ca, es, en } from "@/i18n";
 import SiteSection from "@/components/site-section/index.vue";
 import "@/styles/index.scss";
@@ -21,5 +22,6 @@ const i18n = createI18n({
 
 const app = createApp(App);
 app.use(i18n);
+app.use(DeviceHelper);
 app.component("site-section", SiteSection);
 app.mount("#app");

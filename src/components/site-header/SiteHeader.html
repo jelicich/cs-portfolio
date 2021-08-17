@@ -1,13 +1,49 @@
 <header class="SiteHeader">
   <h1 class="SiteHeader-title">Clara<span>Serna</span></h1>
-  <div class="SiteHeader-navContainer">
-    <nav class="SiteHeader-nav">
-      <a :class="{'is-active': currentSection === 'home'}" href="#home">{{ $t("header.menu.home") }}</a>
-      <a :class="{'is-active': currentSection === 'about'}" href="#about">{{ $t("header.menu.about") }}</a>
-      <a :class="{'is-active': currentSection === 'portfolio'}" href="#portfolio">{{ $t("header.menu.portfolio") }}</a>
-      <a :class="{'is-active': currentSection === 'contact'}" href="#contact">{{ $t("header.menu.contact") }}</a>
+  <button 
+    class="SiteHeader-hamburger"
+    :class="{'is-open': isMenuOpen}"
+    @click="toggleMenu()" 
+    v-if="$isMobile()"
+  >
+    <span></span>
+    <span></span>
+  </button>
+  <div 
+    class="SiteHeader-navContainer" 
+    :class="{'SiteHeader-navContainer--mobile': $isMobile(), 'is-open': isMenuOpen}"
+  >
+    <nav 
+      class="SiteHeader-nav"
+      :class="{'SiteHeader-nav--mobile': $isMobile()}"  
+    >
+      <a 
+        :class="{'is-active': currentSection === 'home'}" 
+        href="#home"
+        @click="handleNav()"
+      >{{ $t("header.menu.home") }}</a>
+      <a 
+        :class="{'is-active': currentSection === 'about'}" 
+        href="#about"
+        @click="handleNav()"
+      >{{ $t("header.menu.about") }}</a>
+      <a 
+        :class="{'is-active': currentSection === 'portfolio'}" 
+        href="#portfolio"
+        @click="handleNav()"
+      >{{ $t("header.menu.portfolio") }}</a>
+      <a 
+        :class="{'is-active': currentSection === 'contact'}" 
+        href="#contact"
+        @click="handleNav()"
+      >{{ $t("header.menu.contact") }}</a>
     </nav>
-    <select class="SiteHeader-langSelector" v-model="$i18n.locale" @change="updateLocale($event)">
+    <select 
+      class="SiteHeader-langSelector"
+      :class="{'SiteHeader-langSelector--mobile': $isMobile()}" 
+      v-model="$i18n.locale"
+      @change="updateLocale($event)"
+    >
       <option v-for="locale in $i18n.availableLocales" :key="`locale-${locale}`" :value="locale">{{ $t(`header.lang.${locale}`) }}</option>
     </select>
   </div>

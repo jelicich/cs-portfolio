@@ -27,8 +27,8 @@ import { Options, Vue } from "vue-class-component";
   watch: {
     show: {
       immediate: true,
-      handler(isShown) {
-        this.toggleBodyClass(isShown);
+      handler(isShown: boolean): void {
+        this.$toggleBodyClass(isShown);
       },
     },
   },
@@ -45,10 +45,5 @@ export default class Modal extends Vue {
 
   close(): void {
     this.$emit("update:show", false);
-  }
-
-  toggleBodyClass(toggle: boolean): void {
-    const body = document.querySelector("body");
-    body?.classList.toggle("is-blocked", toggle);
   }
 }
