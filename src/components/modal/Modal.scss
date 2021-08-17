@@ -1,0 +1,58 @@
+@import '@/styles/variables';
+@import '@/styles/breakpoints';
+
+.Modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $white;
+  z-index: 200;
+  padding: $padding-container;
+  padding-bottom: 20px;
+  border-top: 20px solid $primary;
+  display: flex;
+  flex-direction: column;
+
+  &-headerRow {
+    display: flex;
+    justify-content: space-between;
+
+    @include sm-down {
+      position: relative;
+      padding-top: 38px;
+    }
+  }
+
+  &-closeButton {
+    text-transform: uppercase;
+
+    @include sm-down {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 38px;
+    }
+  }
+
+  &-title {
+    @include sm-down {
+      font-size: 18px;
+    }
+  }
+
+  &-description {
+    margin-bottom: 20px;
+  }
+
+  &-contentWrapper {
+    flex: 1;
+    overflow: hidden;
+  }
+
+  &-content {
+    max-height: 100%;
+    overflow-y: scroll;
+  }
+}

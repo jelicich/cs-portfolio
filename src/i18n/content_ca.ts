@@ -41,8 +41,8 @@ export const ca = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       },
     },
-    modal: {
-      close: "Tanca",
-    },
+  },
+  modal: {
+    close: "Tanca",
   },
 };

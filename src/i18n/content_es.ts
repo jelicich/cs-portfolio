@@ -41,8 +41,8 @@ export const es = {
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
       },
     },
-    modal: {
-      close: "Cerrar",
-    },
+  },
+  modal: {
+    close: "Cerrar",
   },
 };

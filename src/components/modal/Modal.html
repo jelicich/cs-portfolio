@@ -1,0 +1,16 @@
+<section class="Modal" v-if="show">
+  <div class="Modal-header">
+    <div class="Modal-headerRow">
+      <h1 class="Modal-title SectionTitle">{{ title }}</h1>
+      <button @click="close" class="Modal-closeButton Button Button--transparent">{{ closeButtonText }}</button>
+    </div>
+    <p class="Modal-description" v-html="description">
+    </p>
+  </div>
+  <div class="Modal-contentWrapper">
+    <div class="Modal-content">
+      <!-- @slot: Content slot -->
+      <slot></slot>
+    </div>
+  </div>
+</section>

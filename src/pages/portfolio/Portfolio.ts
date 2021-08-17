@@ -1,31 +1,34 @@
 import { Options, Vue } from "vue-class-component";
+import Modal from "@/components/modal/index.vue";
+import { PortfolioItem } from "@/models";
 
 @Options({
-  components: {},
+  components: { Modal },
 })
 export default class Portfolio extends Vue {
-  data() {
-    return {
-      items: [
-        {
-          title: "portfolio.items.item1.title",
-          img: require("@/assets/item1.png"),
-          description: "portfolio.items.item1.description",
-        },
-        {
-          title: "portfolio.items.item2.title",
-          img: require("@/assets/item2.png"),
-          description: "portfolio.items.item2.description",
-        },
-        {
-          title: "portfolio.items.item3.title",
-          img: require("@/assets/item3.png"),
-          description: "portfolio.items.item3.description",
-        },
-      ],
-    };
-  }
+  showModal = false;
+  items: Array<PortfolioItem> = []; // = items;
+  currentItem: PortfolioItem | null = null;
+
   mounted(): void {
-    console.log("mounted Portfolio");
+    this.getProjects();
+  }
+
+  async getProjects(): Promise<void> {
+    try {
+      const response = await fetch("/static/portfolio-items.json");
+      this.items = await response.json();
+    } catch (error) {
+      console.error("There was an error loading the projects: ", error);
+    }
+  }
+
+  openModal(item: PortfolioItem): void {
+    this.currentItem = item;
+    this.showModal = true;
+  }
+
+  closeModal(): void {
+    this.showModal = false;
   }
 }

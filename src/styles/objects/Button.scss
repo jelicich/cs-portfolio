@@ -5,4 +5,19 @@
     color: $white;
     text-decoration: none;
     cursor: pointer;
+    border: none;
+    font-size: 16px;
+    
+    &:hover {
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    &--transparent {
+        background: none;
+        color: $font-color;
+
+        &:hover {
+            background: rgba(0, 0, 0, 0.1);
+        }
+    }
 }

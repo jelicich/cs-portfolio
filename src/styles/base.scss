@@ -4,6 +4,10 @@ body {
   color: $font-color;
   margin: 0;
   padding: 0;
+
+  &.is-blocked {
+    overflow: hidden;
+  }
 }
 
 h1,

@@ -6,17 +6,28 @@
       v-for="item, i in items"
       :key="i"
       class="Portfolio-item">
-      <button class="Portfolio-itemAction" href="#">
-        <img class="Portfolio-itemImg" :src="item.img" />
+      <button class="Portfolio-itemAction" @click="openModal(item)">
+        <img class="Portfolio-itemImg" :src="item.img" alt="item.tile" />
         <h2 class="Portfolio-itemTitle">{{ $t(item.title) }}</h2>
       </button>
     </li>
   </ul>
-  <section class="Portfolio-modal" v-if="isModalVisible">
-    <div class="Portfolio-modalHeader">
-      <h1></h1>
-      <button>{{ $t('portfolio.modal.close') }}</button>
-    </div>
-  </section>
+  <modal
+    v-if="currentItem"
+    v-model:show="showModal"
+    :close-button-text="$t('modal.close')"
+    :title="$t(currentItem.title)"
+    :description="$t(currentItem.description)"
+  >
+    <ul class="Portfolio-project">
+      <li 
+        v-for="image, i in currentItem.content"
+        :key="i"
+        class="Portfolio-projectImage"
+      >
+      <img :src="image.img" :alt="$t(image.description)"/>
+      <p>{{ $t(image.description) }}</p>
+    </li>
+    </ul>
+  </modal>
 </site-section>
-
