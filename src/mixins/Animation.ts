@@ -27,22 +27,16 @@ export default class Animation extends Vue {
     console.log("created.registered plugin and timeline", this.gsapTimeline);
   }
 
-  private _to(
-    el: string | HTMLElement,
-    options: AnimationOptions
-  ): GSAPTimeline {
-    if (this.isMobile?.() && !options.runInMobile) return this.gsapTimeline;
-    console.log("running to", this.gsapTimeline);
+  private _to(el: string | HTMLElement, options: AnimationOptions): void {
+    if (this.isMobile?.() && !options.runInMobile) return;
     this.gsapTimeline.to(el, options.gsapOptions);
-    return this.gsapTimeline;
+    this.gsapTimeline.progress(1).progress(0);
   }
 
-  private _from(
-    el: string | HTMLElement,
-    options: AnimationOptions
-  ): GSAPTimeline {
+  private _from(el: string | HTMLElement, options: AnimationOptions): void {
+    if (this.isMobile?.() && !options.runInMobile) return;
     this.gsapTimeline.from(el, options.gsapOptions);
-    return this.gsapTimeline;
+    this.gsapTimeline.progress(1).progress(0);
   }
 
   // helpers

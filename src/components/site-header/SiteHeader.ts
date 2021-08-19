@@ -39,6 +39,7 @@ export default class SiteHeader extends mixins(Animation) {
 
     const animationOptions = {
       runInMobile: false,
+      animationName: "headerPositionAnimation",
       gsapOptions: {
         scrollTrigger: {
           trigger: TRIGGER_ELEMENT_SEL,
@@ -59,6 +60,7 @@ export default class SiteHeader extends mixins(Animation) {
 
     const animationOptions = {
       runInMobile: false,
+      animationName: "logoAnimation",
       gsapOptions: {
         scrollTrigger: {
           trigger: TRIGGER_ELEMENT_SEL,
