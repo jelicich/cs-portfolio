@@ -1,21 +1,21 @@
-<header class="SiteHeader">
+<header class="SiteHeader" id="site-header">
   <h1 class="SiteHeader-title">Clara<span>Serna</span></h1>
   <button 
     class="SiteHeader-hamburger"
     :class="{'is-open': isMenuOpen}"
     @click="toggleMenu()" 
-    v-if="$isMobile()"
+    v-if="isMobile()"
   >
     <span></span>
     <span></span>
   </button>
   <div 
     class="SiteHeader-navContainer" 
-    :class="{'SiteHeader-navContainer--mobile': $isMobile(), 'is-open': isMenuOpen}"
+    :class="{'SiteHeader-navContainer--mobile': isMobile(), 'is-open': isMenuOpen}"
   >
     <nav 
       class="SiteHeader-nav"
-      :class="{'SiteHeader-nav--mobile': $isMobile()}"  
+      :class="{'SiteHeader-nav--mobile': isMobile()}"  
     >
       <a 
         :class="{'is-active': currentSection === 'home'}" 
@@ -40,7 +40,7 @@
     </nav>
     <select 
       class="SiteHeader-langSelector"
-      :class="{'SiteHeader-langSelector--mobile': $isMobile()}" 
+      :class="{'SiteHeader-langSelector--mobile': isMobile()}" 
       v-model="$i18n.locale"
       @change="updateLocale($event)"
     >
