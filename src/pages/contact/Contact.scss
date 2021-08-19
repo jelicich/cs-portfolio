@@ -16,13 +16,31 @@
   }
 
   &-frame {
-    // TODO: temp
     padding: 40px;
     border: $border;
+    position: relative;
+  }
+
+  &-innerFrame {
+    white-space: nowrap;
+
+    @include sm-down {
+      white-space: initial;
+    }
   }
 
   &-content {
     margin-bottom: 20px;
+    overflow: hidden;
+
+    &::after {
+      content: "____";
+      color: $white;
+
+      @include sm-down {
+        content: '';
+      }
+    }
   }
 
   &-action {
