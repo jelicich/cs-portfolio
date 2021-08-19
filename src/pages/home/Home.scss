@@ -38,6 +38,8 @@ $padding-text: 20px;
     font-size: 60px;
     font-weight: $bold;
     padding-left: $padding-text;
+    position: relative;
+    overflow: hidden;
     
     @include xs {
       font-size: 30px;  
@@ -48,6 +50,11 @@ $padding-text: 20px;
         font-size: 30px;
       }
     }
+  }
+
+  &-titleLine {
+    display: block;
+    position: relative;
   }
 
   &-subtitle {
@@ -69,5 +76,11 @@ $padding-text: 20px;
         font-size: 18px;
       }
     }
+  }
+  
+  &-subtitleLine {
+    display: block;
+    position: relative;
+    white-space: nowrap;
   }
 }
