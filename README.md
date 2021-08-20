@@ -1,4 +1,5 @@
 # cs-portfolio
+View project running: https://jelicich.github.io/cs-portfolio/
 
 ## Project setup
 ```
