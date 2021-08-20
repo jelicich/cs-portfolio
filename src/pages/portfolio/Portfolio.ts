@@ -71,7 +71,7 @@ export default class Portfolio extends mixins(Animation) {
             start: `${this.helpers.vh(50) * offset} bottom`,
             end: "bottom bottom",
           },
-          y: this.helpers.vh(50),
+          y: this.helpers.vh(70),
         },
       };
 

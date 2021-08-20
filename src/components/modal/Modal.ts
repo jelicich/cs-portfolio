@@ -1,4 +1,6 @@
 import { Options, Vue } from "vue-class-component";
+import { ToggleBodyClassType } from "@/models";
+import { inject } from "vue";
 
 @Options({
   props: {
@@ -28,7 +30,7 @@ import { Options, Vue } from "vue-class-component";
     show: {
       immediate: true,
       handler(isShown: boolean): void {
-        this.$toggleBodyClass(isShown);
+        this.toggleBodyClass(isShown);
       },
     },
   },
@@ -39,9 +41,7 @@ export default class Modal extends Vue {
   closeButtonText!: string;
   description!: string;
 
-  mounted(): void {
-    console.log("mounted modal", this.show);
-  }
+  toggleBodyClass: ToggleBodyClassType | undefined = inject("toggleBodyClass");
 
   close(): void {
     this.$emit("update:show", false);

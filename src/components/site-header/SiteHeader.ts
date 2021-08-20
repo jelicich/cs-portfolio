@@ -2,14 +2,13 @@ import { Options, mixins } from "vue-class-component";
 import Animation from "@/mixins/Animation";
 import { inject } from "vue";
 import { IsMobileType, ToggleBodyClassType } from "@/models";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 @Options({
-  props: {
-    currentSection: String,
-  },
+  props: {},
 })
 export default class SiteHeader extends mixins(Animation) {
-  currentSection!: string;
+  currentSection = "";
   isMenuOpen = false;
   toggleBodyClass: ToggleBodyClassType | undefined = inject("toggleBodyClass");
   isMobile: IsMobileType | undefined = inject("isMobile");
@@ -17,6 +16,8 @@ export default class SiteHeader extends mixins(Animation) {
   mounted(): void {
     this.headerPositionAnimation();
     this.logoAnimation();
+    this.setSmoothScroll();
+    this.setActiveLinks();
   }
 
   updateLocale($event: MouseEvent): void {
@@ -71,13 +72,50 @@ export default class SiteHeader extends mixins(Animation) {
         x: () => {
           const el = document.querySelector(TARGET_SEL);
           const width = el?.getBoundingClientRect().width || 0;
-          const offset = `-${width - this.helpers.vw(10)}px`;
-          console.log("offset ", offset);
           return `-${width + this.helpers.vw(10)}px`;
         },
       },
     };
 
     this.timeline.from(TARGET_SEL, animationOptions);
+  }
+
+  setSmoothScroll(): void {
+    const LINKS_SELECTOR = ".SiteHeader-nav a";
+    const links = document.querySelectorAll(LINKS_SELECTOR);
+    links.forEach((link) => {
+      (link as HTMLAnchorElement).onclick = (e: MouseEvent) => {
+        e.preventDefault();
+        const target = (e?.currentTarget as HTMLElement)?.getAttribute("href");
+        const scrollTo =
+          target && (document?.querySelector(target) as HTMLElement).offsetTop;
+
+        const gsapOptions = {
+          duration: 1.5,
+          scrollTo: scrollTo,
+          ease: "power2.inOut",
+        };
+
+        this.gsap.to(window, gsapOptions as GSAPTweenVars);
+      };
+    });
+  }
+
+  setActiveLinks(): void {
+    const links = document.querySelectorAll(".SiteHeader-nav a");
+    links.forEach((link) => {
+      ScrollTrigger.create({
+        trigger: link.getAttribute("href"),
+        start: "top center",
+        end: "bottom center",
+        scrub: true,
+        onEnter: (e) => {
+          this.currentSection = e.trigger?.id || "";
+        },
+        onEnterBack: (e) => {
+          this.currentSection = e.trigger?.id || "";
+        },
+      });
+    });
   }
 }

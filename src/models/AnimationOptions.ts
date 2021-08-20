@@ -1,4 +1,4 @@
 export interface AnimationOptions {
   runInMobile?: boolean;
-  gsapOptions: GSAPTweenVars;
+  gsapOptions: GSAPTweenVars | GSAPTimelineVars;
 }

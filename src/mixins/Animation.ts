@@ -1,6 +1,7 @@
 import { Options, Vue } from "vue-class-component";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { AnimationOptions, IsMobileType, ToggleBodyClassType } from "@/models";
 import { inject } from "vue";
 
@@ -11,6 +12,7 @@ export default class Animation extends Vue {
   private gsapTimeline: GSAPTimeline = gsap.timeline();
   toggleBodyClass: ToggleBodyClassType | undefined = inject("toggleBodyClass");
   isMobile: IsMobileType | undefined = inject("isMobile");
+  gsap = gsap;
 
   timeline = {
     to: this._to.bind(this),
@@ -24,16 +26,22 @@ export default class Animation extends Vue {
 
   created(): void {
     gsap.registerPlugin(ScrollTrigger);
-    console.log("created.registered plugin and timeline", this.gsapTimeline);
+    gsap.registerPlugin(ScrollToPlugin);
   }
 
-  private _to(el: string | HTMLElement, options: AnimationOptions): void {
+  private _to(
+    el: string | HTMLElement | Window,
+    options: AnimationOptions
+  ): void {
     if (this.isMobile?.() && !options.runInMobile) return;
     this.gsapTimeline.to(el, options.gsapOptions);
     this.gsapTimeline.progress(1).progress(0);
   }
 
-  private _from(el: string | HTMLElement, options: AnimationOptions): void {
+  private _from(
+    el: string | HTMLElement | Window,
+    options: AnimationOptions
+  ): void {
     if (this.isMobile?.() && !options.runInMobile) return;
     this.gsapTimeline.from(el, options.gsapOptions);
     this.gsapTimeline.progress(1).progress(0);
