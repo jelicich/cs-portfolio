@@ -1,0 +1,20 @@
+[
+  {
+    "title": "portfolio.items.item1.title",
+    "img": "/static/item1.png",
+    "description": "portfolio.items.item1.description",
+    "content": [{ "img": "", "description": "" }]
+  },
+  {
+    "title": "portfolio.items.item2.title",
+    "img": "/static/item2.png",
+    "description": "portfolio.items.item2.description",
+    "content": [{ "img": "", "description": "" }]
+  },
+  {
+    "title": "portfolio.items.item3.title",
+    "img": "/static/item3.png",
+    "description": "portfolio.items.item3.description",
+    "content": [{ "img": "", "description": "" }]
+  }
+]
