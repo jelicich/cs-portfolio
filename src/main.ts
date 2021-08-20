@@ -24,5 +24,6 @@ const app = createApp(App);
 app.use(i18n);
 app.provide("toggleBodyClass", toggleBodyClass);
 app.provide("isMobile", isMobile);
+app.provide("baseUrl", process.env.BASE_URL);
 app.component("site-section", SiteSection);
 app.mount("#app");

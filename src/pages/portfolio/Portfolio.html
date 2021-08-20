@@ -7,7 +7,7 @@
       :key="i"
       class="Portfolio-item">
       <button class="Portfolio-itemAction" @click="openModal(item)">
-        <img class="Portfolio-itemImg" :src="item.img" alt="item.tile" />
+        <img class="Portfolio-itemImg" :src="baseUrl + item.img" alt="item.tile" />
         <h2 class="Portfolio-itemTitle">{{ $t(item.title) }}</h2>
       </button>
     </li>

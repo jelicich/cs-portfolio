@@ -2,6 +2,7 @@ import { Options, mixins } from "vue-class-component";
 import Modal from "@/components/modal/index.vue";
 import { PortfolioItem } from "@/models";
 import Animation from "@/mixins/Animation";
+import { inject } from "vue";
 
 @Options({
   components: { Modal },
@@ -10,6 +11,7 @@ export default class Portfolio extends mixins(Animation) {
   showModal = false;
   items: Array<PortfolioItem> = []; // = items;
   currentItem: PortfolioItem | null = null;
+  baseUrl = inject("baseUrl");
 
   async mounted(): Promise<void> {
     await this.getProjects();
@@ -19,7 +21,9 @@ export default class Portfolio extends mixins(Animation) {
 
   async getProjects(): Promise<void> {
     try {
-      const response = await fetch("/static/portfolio-items.json");
+      const response = await fetch(
+        `${this.baseUrl}/static/portfolio-items.json`
+      );
       this.items = await response.json();
     } catch (error) {
       console.error("There was an error loading the projects: ", error);
