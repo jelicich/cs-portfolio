@@ -1,5 +1,6 @@
 import { Options, mixins } from "vue-class-component";
 import Animation from "@/mixins/Animation";
+import { inject } from "vue";
 
 @Options({
   props: {
@@ -8,6 +9,7 @@ import Animation from "@/mixins/Animation";
 })
 export default class About extends mixins(Animation) {
   msg!: string;
+  baseUrl = inject("baseUrl");
 
   mounted(): void {
     this.animateImage();

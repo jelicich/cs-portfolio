@@ -19,7 +19,7 @@ export const es = {
   about: {
     title: "Sobre mi",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "Mi nombre es Clara, vengo del mundo aeronáutico, de viajar mucho y de pasar poco tiempo en casa. Esta experiencia llevó a darme cuenta lo importante que es hacer de la casa un hogar y así poder habitar el espacio en que vivimos en términos de calidad; hacer de cada rincón una experiencia y vivir en calidez, comfort y funcionalidad.<br> Gracias a esto decidí estudiar la carrera de Diseño de Interiores. Me caracterizo por ser una persona dinámica, creativa, resolutiva y perseverante; estoy en la búsqueda de nuevos desafíos para adquirir conocimientos teóricos y prácticos en el mundo del interiorismo.",
     action: "Descargar CV",
   },
   portfolio: {
@@ -47,7 +47,9 @@ export const es = {
   },
   contact: {
     title: "Contacto",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    content: "Gracias por visitar mi portfolio. Espero tu contacto!",
+  },
+  construction: {
+    content: "Sitio en construcción 👷",
   },
 };

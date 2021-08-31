@@ -1,17 +1,29 @@
 import { Options, mixins } from "vue-class-component";
 import Animation from "@/mixins/Animation";
-import { inject } from "vue";
+import { inject, PropType } from "vue";
 import { IsMobileType, ToggleBodyClassType } from "@/models";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 @Options({
-  props: {},
+  props: {
+    links: {
+      type: Array as PropType<string[]>,
+      required: true,
+      default: [],
+    },
+  },
 })
 export default class SiteHeader extends mixins(Animation) {
   currentSection = "";
   isMenuOpen = false;
   toggleBodyClass: ToggleBodyClassType | undefined = inject("toggleBodyClass");
   isMobile: IsMobileType | undefined = inject("isMobile");
+  links: Array<string> = [];
+
+  get linkList(): Array<string> {
+    const result = this.links.map((link: string) => link.toLowerCase());
+    return result;
+  }
 
   mounted(): void {
     this.headerPositionAnimation();

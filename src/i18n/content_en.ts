@@ -19,7 +19,7 @@ export const en = {
   about: {
     title: "About me",
     content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+      "My name is Clara, I used to work in the travel industry as a chief flight attendant, flying a lot and being little time at home. This experience made me realize how important it is to make our house a home in order to enjoy the place we inhabit in therms of quality; making each corner an experience and living in warmth, comfort and functionality.<br> As a result, I decided to study Interior Design. I consider myself as a dynamic, creative, decisive and determined person; looking for new challenges with the aim of acquiring practical and theoretical knowledge within the interior design world.",
     action: "Download CV",
   },
   portfolio: {
@@ -47,7 +47,9 @@ export const en = {
   },
   contact: {
     title: "Contact me",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
+    content: "Thanks for your visit. Let's keep in touch!",
+  },
+  construction: {
+    content: "Under construction 👷",
   },
 };

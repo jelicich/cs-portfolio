@@ -1,0 +1,24 @@
+@import '@/styles/variables';
+@import '@/styles/breakpoints';
+
+.Construction {
+  position: fixed;
+  z-index: 99999;
+  bottom: 0;
+  right: 0;
+  transform: rotate(-45deg) translate(35%, 150%);
+
+  &-text {
+    background: $primary;
+    padding: 5px 100px;
+    color: $white;
+    font-size: 12px;
+  }
+
+  @include sm-down {
+    transform: none;
+    left: 0;
+    right: 0;
+    text-align: center;
+  }
+}

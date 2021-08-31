@@ -50,4 +50,7 @@ export const ca = {
     content:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
   },
+  construction: {
+    content: "Under construction 👷",
+  },
 };

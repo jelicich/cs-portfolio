@@ -18,25 +18,12 @@
       :class="{'SiteHeader-nav--mobile': isMobile()}"  
     >
       <a 
-        :class="{'is-active': currentSection === 'home'}" 
-        href="#home"
+        v-for="(link, i) in linkList"
+        :key="i"
+        :class="{'is-active': currentSection === link}" 
+        :href="`#${link}`"
         @click="handleNav()"
-      >{{ $t("header.menu.home") }}</a>
-      <a 
-        :class="{'is-active': currentSection === 'about'}" 
-        href="#about"
-        @click="handleNav()"
-      >{{ $t("header.menu.about") }}</a>
-      <a 
-        :class="{'is-active': currentSection === 'portfolio'}" 
-        href="#portfolio"
-        @click="handleNav()"
-      >{{ $t("header.menu.portfolio") }}</a>
-      <a 
-        :class="{'is-active': currentSection === 'contact'}" 
-        href="#contact"
-        @click="handleNav()"
-      >{{ $t("header.menu.contact") }}</a>
+      >{{ $t(`header.menu.${link}`) }}</a> 
     </nav>
     <select 
       class="SiteHeader-langSelector"

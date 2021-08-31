@@ -1,6 +1,6 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import { createI18n } from "vue-i18n";
+import { createI18n, LocaleMessages, VueMessageType } from "vue-i18n";
 import { toggleBodyClass, isMobile } from "@/globals/device-helper";
 import { ca, es, en } from "@/i18n";
 import SiteSection from "@/components/site-section/index.vue";
@@ -12,11 +12,15 @@ enum LOCALE {
   EN = "en",
 }
 
-const messages = { ca, es, en };
+const messages: { [lang: string]: LocaleMessages<VueMessageType> } = JSON.parse(
+  process.env.VUE_APP_IS_MVP
+)
+  ? { es, en }
+  : { es, ca, en };
 
 const i18n = createI18n({
-  locale: LOCALE.CA,
-  fallbackLocale: LOCALE.ES,
+  locale: LOCALE.ES,
+  fallbackLocale: LOCALE.EN,
   messages,
 });
 

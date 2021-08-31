@@ -6,7 +6,7 @@
     <div class="About-contentContainer">
       <p class="About-content" v-html="$t('about.content')"></p>
     </div>
-    <a class="About-action Button" href="#">{{ $t('about.action') }}</a>
+    <a class="About-action Button" :href="baseUrl + '/static/cv-clara-serna.pdf'" target="_blank">{{ $t('about.action') }}</a>
   </div>
 </site-section>
 
