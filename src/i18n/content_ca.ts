@@ -29,16 +29,31 @@ export const ca = {
         title: "Lorem ipsum dolor",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        content: {
+          pic1: "Lorem ipsum",
+          pic2: "Lorem ipsum",
+          pic3: "lorem impsum",
+        },
       },
       item2: {
         title: "Consectetur adipiscing",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        content: {
+          pic1: "Lorem ipsum",
+          pic2: "Lorem ipsum",
+          pic3: "lorem impsum",
+        },
       },
       item3: {
         title: "Sed do eiusmod",
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+        content: {
+          pic1: "Lorem ipsum",
+          pic2: "Lorem ipsum",
+          pic3: "lorem impsum",
+        },
       },
     },
   },

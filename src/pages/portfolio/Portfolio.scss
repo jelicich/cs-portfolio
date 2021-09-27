@@ -95,5 +95,40 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  &-projectImage {
+    display: flex;
+    
+    @include sm-down {
+      flex-direction: column;
+    }
+    
+    img {
+      max-width: 45%;
+      margin-right: 5%;
+      margin-bottom: 40px;
+
+      @include sm-down {
+        max-width: 100%;
+        order: 2;
+      }
+    }
+
+    p {
+      margin-bottom: 40px;
+      max-width: 450px;
+      text-align: justify;
+      
+      @include sm-down {
+        order: 1;
+        margin-top: 20px;
+        max-width: none;
+        text-align: left;
+      }
+    }
   }
 }

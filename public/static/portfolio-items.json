@@ -1,20 +1,63 @@
 [
   {
     "title": "portfolio.items.item1.title",
-    "img": "/static/item1.png",
+    "img": "/static/item1.jpg",
     "description": "portfolio.items.item1.description",
-    "content": [{ "img": "", "description": "" }]
+    "content": [
+      { "img": "virasoro/render_1.jpg", "description": "portfolio.items.item1.content.pic1" },
+      { "img": "virasoro/render_2.jpg", "description": "" },
+      { "img": "virasoro/render_3.jpg", "description": "" },
+      { "img": "virasoro/real_3.jpg", "description": "portfolio.items.item1.content.pic2" },
+      { "img": "virasoro/real_2.jpg", "description": "" },
+      { "img": "virasoro/real_1.jpg", "description": "" },
+      { "img": "virasoro/real_4.jpg", "description": "" },
+      { "img": "virasoro/real_5.jpg", "description": "" },
+      { "img": "virasoro/old_1.jpg", "description": "portfolio.items.item1.content.pic3" },
+      { "img": "virasoro/old_2.jpg", "description": "" },
+      { "img": "virasoro/old_3.jpg", "description": "" },
+      { "img": "virasoro/old_4.jpg", "description": "" },
+      { "img": "virasoro/old_5.jpg", "description": "" },
+      { "img": "virasoro/old_6.jpg", "description": "" },
+      { "img": "virasoro/old_7.jpg", "description": "" }
+    ]
   },
   {
     "title": "portfolio.items.item2.title",
-    "img": "/static/item2.png",
+    "img": "/static/item2.jpg",
     "description": "portfolio.items.item2.description",
-    "content": [{ "img": "", "description": "" }]
+    "content": [
+      { "img": "mesa/render-1.jpg", "description": "portfolio.items.item2.content.pic1" },
+      { "img": "mesa/render-2.jpg", "description": "" },
+      { "img": "mesa/render-3.jpg", "description": "" },
+      { "img": "mesa/plano-ortogonal-1.jpg", "description": "portfolio.items.item2.content.pic2" },
+      { "img": "mesa/plano-ortogonal-2.jpg", "description": "portfolio.items.item2.content.pic3" },
+      { "img": "mesa/plano-axonometrico.jpg", "description": "portfolio.items.item2.content.pic4" },
+      { "img": "mesa/mesa-proceso-1.jpg", "description": "portfolio.items.item2.content.pic5" },
+      { "img": "mesa/mesa-proceso-2.jpg", "description": "" },
+      { "img": "mesa/mesa-video.gif", "description": "portfolio.items.item2.content.pic6" },
+      { "img": "mesa/mesa-real.jpg", "description": "" }
+    ]
   },
   {
     "title": "portfolio.items.item3.title",
-    "img": "/static/item3.png",
+    "img": "/static/item3.jpg",
     "description": "portfolio.items.item3.description",
-    "content": [{ "img": "", "description": "" }]
+    "content": [
+      { "img": "misc/comoda-1.jpg", "description": "portfolio.items.item3.content.pic1" },
+      { "img": "misc/comoda-2.jpg", "description": "" },
+      { "img": "misc/comoda-3.jpg", "description": "" },
+      { "img": "misc/silla-1.jpg", "description": "portfolio.items.item3.content.pic2" },
+      { "img": "misc/silla-2.jpg", "description": "" },
+      { "img": "misc/silla-3.jpg", "description": "" },
+      { "img": "misc/silla-4.jpg", "description": "" },
+      { "img": "misc/mesa-1.jpg", "description": "portfolio.items.item3.content.pic3" },
+      { "img": "misc/mesa-2.jpg", "description": "" },
+      { "img": "misc/cuencos-1.jpg", "description": "portfolio.items.item3.content.pic4" },
+      { "img": "misc/cuencos-2.jpg", "description": "" },
+      { "img": "misc/cuencos-3.jpg", "description": "" },
+      { "img": "misc/manta-1.jpg", "description": "portfolio.items.item3.content.pic5" },
+      { "img": "misc/manta-2.jpg", "description": "" },
+      { "img": "misc/manta-3.jpg", "description": "" }
+    ]
   }
 ]

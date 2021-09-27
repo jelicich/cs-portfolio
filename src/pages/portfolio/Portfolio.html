@@ -25,9 +25,9 @@
         :key="i"
         class="Portfolio-projectImage"
       >
-      <img :src="image.img" :alt="$t(image.description)"/>
-      <p>{{ $t(image.description) }}</p>
-    </li>
+        <img :src="`static/${image.img}`" :alt="$t(image.description)"/>
+        <p v-if="image.description" v-html="$t(image.description)"></p>
+      </li>
     </ul>
   </modal>
 </site-section>
